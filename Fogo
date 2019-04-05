@@ -1,0 +1,21 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Fogo : MonoBehaviour
+{
+
+    public float intervalo = 2;
+    public GameObject balaPrefab;
+    public GameObject balaPosicao;
+
+    void Start()
+    {
+        InvokeRepeating("Fire", intervalo, intervalo);
+    }
+
+    void Fire()
+    {
+        Instantiate(balaPrefab, balaPosicao.transform.position, Quaternion.identity);
+    }
+}
