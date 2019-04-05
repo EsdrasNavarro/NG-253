@@ -1,0 +1,13 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class DirecaoTiro : MonoBehaviour
+{
+    public Vector2 velocity;  //variável para controlar a velocidade do tiro
+
+    void Start()
+    {
+        GetComponent<Rigidbody2D> ().velocity = velocity;
+    }
+}
