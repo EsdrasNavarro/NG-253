@@ -1,0 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Spawn : MonoBehaviour
+{
+    public GameObject nave; 
+    public float intervalo = 1;
+    
+    void Start()
+    {
+        InvokeRepeating("ProximaNave", intervalo, intervalo);
+    }
+
+    void ProximaNave()
+    {
+        Instantiate(nave, transform.position, Quaternion.identity);
+    }
+}
